@@ -1,21 +1,5 @@
-<<<<<<< HEAD
-
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <h1>Meet all the photographers</h1>
-      <ul class="list-group">
-        <% @photographers.each do |photographer| %>
-          <li class="list-group-item">
-            <%= link_to photographer.user.full_name, photographer_path(photographer) %>
-          </li>
-        <% end %>
-      </ul>
-    </div>
-=======
 <div class="container">
   <div class="row">
     <%= render @photographers %>
->>>>>>> 3201f01a3ed36fbc87a47daebdc69d01d68d1ee1
   </div>
 </div>
