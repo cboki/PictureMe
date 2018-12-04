@@ -1,6 +1,10 @@
 class AppointmentsController < ApplicationController
 
   def index
+    @user = User.find(params[:user_id])
+    @userAppointments = Appointment.where(user_id: @user.id)
+    @photographers = Photographer.all
+
   end
 
   def new
@@ -12,7 +16,7 @@ class AppointmentsController < ApplicationController
     @appointment = Appointment.new(appointment_params)
     @appointment.photographer = @photographer
     @appointment.location = @photographer.location
-    @appointment.status = "Pending"
+    @appointment.status = "pending"
     # needs to be added as soon we have our own user
     # @appointment.user = current_user
     @appointment.user_id = 1
