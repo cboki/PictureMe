@@ -10,4 +10,17 @@ class Photographer < ApplicationRecord
   validates :language, presence: true
   validates :daily_price, presence: true, numericality: true
   validates :user, presence: true, uniqueness: true
+
+  def stars
+    # Calcul the number of stars with all the reviews
+    # Return nil if no review, or return the average as an integer
+    return if reviews.empty?
+
+    sum = 0
+    reviews.each do |review|
+      sum += review.stars
+    end
+    average = sum / reviews.count
+    average.floor
+  end
 end
