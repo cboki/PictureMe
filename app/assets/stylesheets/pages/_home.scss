@@ -1,1 +1,36 @@
 // Specific CSS for your home-page
+.fas {
+  color: #6DEEC0;
+  padding: 20px;
+  i {
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  }
+}
+
+
+.lead {
+  font-size: 20px;
+  padding: 20px;
+}
+
+.info-card {
+  height: 250px;
+  margin: 50px;
+  width: 350px;
+}
+.white {
+  background-color: white;
+}
+
+.btn-medium {
+  color: white;
+  border: 1px solid #6DEEC0;
+  padding: 20px 15px;
+  border-radius: 50px;
+}
+.btn-medium:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: white;
+  background-color: #6DEEC0;
+}
