@@ -6,8 +6,7 @@
       <ul class="list-group">
         <% @photographers.each do |photographer| %>
           <li class="list-group-item">
-            <%= link_to photographer.last_name, photographer_path(photographer) %>
-            <p><%= photographer.stars %></p>
+            <%= link_to photographer.user.full_name, photographer_path(photographer) %>
           </li>
         <% end %>
       </ul>
