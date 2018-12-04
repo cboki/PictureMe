@@ -1,0 +1,20 @@
+.photographer-card{
+  margin-top: 75px;
+  width: 300px;
+  height: 400px;
+  background: white;
+  border-radius: 2px;
+  box-shadow:  0 1px 7px rgba(0,0,0,.05);
+}
+.photographer-photo {
+  height: 50%;
+}
+.photographer-name {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.photographer-details {
+  padding: 10px;
+}
+
