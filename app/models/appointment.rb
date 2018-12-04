@@ -1,7 +1,7 @@
 class Appointment < ApplicationRecord
   belongs_to :photographer
   belongs_to :user
-  has_one :review
+  has_one :review, dependent: :destroy
 
   validates :photographer, presence: true
   validates :user, presence: true
