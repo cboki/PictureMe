@@ -1,10 +1,11 @@
 class ReviewsController < ApplicationController
   def new
-    @reviews = Review.com
+    @appointment = Appointment.find(params[:id])
+    @review = Review.new
   end
 
   def create
-    @review = Review.new(review.params)
+    @review = Review.new(review_params)
   end
 
   private
