@@ -1,0 +1,7 @@
+<h1>Hallo Benjamin</h1>
+
+
+<%= simple_form_for @appointment, :url => photographer_appointments_path, :method => :post do |f| %>
+  <%= f.input :date %>
+  <%= f.button :submit %>
+<% end %>
