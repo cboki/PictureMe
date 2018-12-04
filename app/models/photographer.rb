@@ -1,9 +1,9 @@
 class Photographer < ApplicationRecord
   belongs_to :user
-  has_many :appointments
+  has_many :appointments, dependent: :destroy
   has_many :reviews, through: :appointments
-  has_many :photos
-  has_many :photographer_categories
+  has_many :photos, dependent: :destroy
+  has_many :photographer_categories, dependent: :destroy
   has_many :categories, through: :photographer_categories
 
   validates :location, presence: true
