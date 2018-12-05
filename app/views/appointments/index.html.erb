@@ -12,7 +12,8 @@
           <div class="message-name">
             <h3><% datas = @photographers.find(appointment.photographer_id) %>
               <%= datas.user.first_name %>
-            </h3>
+             </h3>
+
             <p><%= appointment.date %></p>
           </div>
           <div class="message-body">
