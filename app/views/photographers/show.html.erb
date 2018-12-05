@@ -20,6 +20,9 @@
                 <% end %>
               </ul>
             </div>
+            <div class="text-center">
+            <%= link_to '📆 Book a full day with me. RIGHT NOW!', new_photographer_appointment_path(@photographer), class: "btn btn-danger" %>
+            </div>
           </div>
         </div>
       </div>
@@ -27,35 +30,36 @@
 </div>
 <div class="wrapper" id="wrapper-reviews">
   <div class="container">
-    <div class="reviews">
-      <div class="row">
+    <div class="row">
+      <h4>They liked the experience</h4>
+      <div class="cards-review">
         <div class="col-xs-12 col-lg-4">
-          <h4>They liked the experiences:</h4>
-          <div class="review-card">
-            <p class="stars">
-              <!-- TODO! Modify the 5 and put @photographer.stars when merged. -->
-              <% 5.times do %>
+          <div class="card-average">
+            <p class="text text-center"><%= @photographer.user.first_name %> has <%= @photographer.reviews.count %> reviews</p>
+            <p class="stars text-center">
+              <% @photographer.stars.times do %>
                 <i class="fa fa-star" style="color: #ffb400"></i>
+              <% end %>
+              <% (5 - @photographer.stars).times do %>
+              <!-- OMGGGGG -->
+                <i class="fa fa-star" style="color: lightgray"></i>
               <% end %>
             </p>
           </div>
         </div>
         <% @photographer.reviews.each do |review| %>
-        <div class="col-xs-12 col-lg-4">
-          <div class="review-card">
-            <div class="review-star">
-              <p>5 <i class="fa fa-star" style="color: #ffb400"></i></p>
-            </div>
-            <div class="review-content">
-              <p><%= review.content %></p>
+          <div class="col-xs-12 col-lg-4">
+            <div class="card-review">
+              <div class="review-star">
+                <p><% review.stars.times do %><i class="fa fa-star" style="color: #ffb400"></i><% end %></p>
+              </div>
+              <div class="review-content">
+                <p><%= review.content %></p>
+              </div>
             </div>
           </div>
-        </div>
         <% end %>
       </div>
-    </div>
-    <div class="booking-form">
-
     </div>
   </div>
 </div>
