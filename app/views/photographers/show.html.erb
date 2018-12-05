@@ -10,9 +10,9 @@
               <h3 class="full-name"><%= @photographer.user.full_name %></h3>
               <p class="description">I have been photographer amateur for 15 years. Feel free to contact me to save your moments ...</p>
               <ul class="list-inline">
-              <li class="location">📍 I live in <%= @photographer.location %></li>
-              <li class="language">💬 I can speak <%= @photographer.language %></li>
-              <li class="price">💰 My daily rate is <%= @photographer.daily_price %> €</li>
+              <li>📍 I live in <%= @photographer.location %></li>
+              <li>💬 I can speak <%= @photographer.language %></li>
+              <li>💰 My daily rate is <%= @photographer.daily_price %> €</li>
               </ul>
               <ul class="list-inline">
                 <% @photographer.categories.each do |category| %>
