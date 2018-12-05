@@ -1,0 +1,35 @@
+    <div class="container">
+
+      <h1>Your Bookings</h1>
+
+      <div class="tabs">
+        <a href="#" class="tab active">Photografer</a>
+      </div>
+      <ul class="inbox">
+        <% @userAppointments.each do |appointment| %>
+        <li class="message">
+          <img src="images/gab.png" alt="" class="avatar-large">
+          <div class="message-name">
+            <h3><% datas = @photographers.find(appointment.photographer_id) %>
+              <%= datas.user.first_name %>
+            </h3>
+            <p><%= appointment.date %></p>
+          </div>
+          <div class="message-body">
+            <p><strong><%= appointment.location %></strong></p>
+            <p>
+              <%= datas.user.first_name %> will be around with you on the <%= appointment.date %> and doing photos.
+            </p>
+          </div>
+          <div class="message-status">
+            <p class="status pending"><%= appointment.status %></p>
+            <p class="price"> €<%= datas.daily_price %></p>
+            <% if appointment.status == "finished" %>
+            <%= button_to 'Add review', new_appointment_review_path(appointment), method: :post %>
+            <% end %>
+          </div>
+        </li>
+        <% end %>
+      </ul>
+
+    </div>

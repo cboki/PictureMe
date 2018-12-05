@@ -75,7 +75,7 @@ puts 'Creating new appointments and reviews...'
 end
 
 puts 'Adding photos to photographers...'
-Photographer.first(5).each do |photographer|
+Photographer.all.each do |photographer|
  photo = Photo.new(url: PHOTOS_URLS.sample)
  photo.photographer = photographer
  photo.save
