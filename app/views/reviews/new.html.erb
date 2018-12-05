@@ -1,9 +1,9 @@
-<%= simple_form_for[@appointment,@review] do |f| %>
+<%= simple_form_for [@appointment, @review] do |f| %>
 
   <div class="form-group">
 
     <%= f.label :stars %>
-    <%= f.text_field :stars, class: 'form-control' %>
+    <%= f.text_field :stars, placeholder: "Please enter a number from 1 to 5", class: 'form-control' %>
 
   </div>
 
