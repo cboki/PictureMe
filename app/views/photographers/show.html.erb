@@ -41,7 +41,6 @@
                 <i class="fa fa-star" style="color: #ffb400"></i>
               <% end %>
               <% (5 - @photographer.stars).times do %>
-              <!-- OMGGGGG -->
                 <i class="fa fa-star" style="color: lightgray"></i>
               <% end %>
             </p>
@@ -55,6 +54,9 @@
               </div>
               <div class="review-content">
                 <p><%= review.content %></p>
+              </div>
+              <div class="review-details">
+                <p><%= review.appointment.user.first_name %>, <%= review.appointment.date %>, in <%= review.appointment.location %></p>
               </div>
             </div>
           </div>
