@@ -1,5 +1,5 @@
 .header-photographer {
-  margin-top: 50px;
+  margin-top: 20px;
   h3 {
     margin: 10px 0px;
   }
@@ -9,22 +9,7 @@
 color: white;
 }
 
-.card-average {
-  height: 80px;
-  padding-top: 10px;
-  .text {
-    font-size: 16px;
-    margin-bottom: 0px;
-  }
-  .stars {
-    font-size: 24px;
-  }
-}
-
-.card-review {
-  position: relative;
+.review-card {
   background-color: white;
   box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
-  height: 80px;
-  margin-bottom: 50px;
 }
