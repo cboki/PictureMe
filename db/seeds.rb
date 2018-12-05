@@ -68,6 +68,7 @@ puts 'Creating new appointments and reviews...'
   )
   appointment.save
 
+
   review = Review.new(
     stars: rand(1..5),
     appointment: appointment)
