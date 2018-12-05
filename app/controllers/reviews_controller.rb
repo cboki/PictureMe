@@ -1,6 +1,7 @@
 class ReviewsController < ApplicationController
   def new
     @appointment = Appointment.find(params[:appointment_id])
+    @photographer = @appointment.photographer
     @review = Review.new
   end
 
