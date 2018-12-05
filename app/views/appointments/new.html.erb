@@ -1,7 +1,16 @@
-<h1>New Appointment</h1>
+<div class="container mtl-8">
+<h1>Book your day with <%= @photographer.user.first_name %></h1>
+<br>
+<br>
+
+<h5><strong>Location:</strong> <%= @photographer.location %></h5>
+<h5><strong>Price:</strong> <%= @photographer.daily_price %>€</h5>
 
 
 <%= simple_form_for @appointment, :url => photographer_appointments_path, :method => :post do |f| %>
-  <%= f.input :date %>
-  <%= f.button :submit %>
+  <%= f.input :date, as: :string %>
+  <br>
+  <%= f.button :submit, class: "btn btn-danger" %>
 <% end %>
+</div>
+
