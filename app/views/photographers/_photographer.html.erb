@@ -1,18 +1,44 @@
+
+ <div> <%=link_to photographer_path(photographer) do  %>
+
 <div class=" cards col-xs-12 col-sm-4 col-md-3">
   <div class="photographer-card">
-    <div class="photographer-photo" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= photographer.photos.first.url %>) center / cover no-repeat;">
-       <div class="photographer-name">
-        <h3>  <%= photographer.user.first_name %></h3>
-      </div>
-    </div>
-    <div class="photographer-details">
 
-        <span class="photographer-location">
-          <%= photographer.location.capitalize %>
-        </span>
-    </div>
-    <div class="photographer-action text-center">
-      <%= link_to "View", photographer_path(photographer), class: "btn btn-default btn-primary"  %>
+    <div class="photographer-photo" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= photographer.photos.first.url %>) center / cover no-repeat;">
+
+
+     <div class="photographer-name">
+      <h3><%= photographer.user.first_name%></h3>
     </div>
   </div>
+
+
+
+  <ul class="list-without-points">
+    <div class="photographer-details">
+     <div class="photographer-location">
+
+        <li class="location"> <i class="fas fa-map-pin"></i> <%= photographer.location.capitalize %></li>
+      </div>
+      <div class="photographer-review">
+        <% if photographer.stars != nil %>
+
+
+        <p><li class="stars"> <% photographer.stars.times do %>
+          <i class="fas fa-star"></i>
+          <% end %>
+        </li>
+        <% end %>
+      </div>
+      <div class="photographer-price">
+        <li> <%= photographer.daily_price %> €</li>
+      </div>
+      <div class="photographer-action">
+        <li> <%= link_to "more details", photographer_path(photographer) %></li></p>
+      </div>
+    </div>
+  </ul>
 </div>
+</div>
+ <% end %>
+ </div>
