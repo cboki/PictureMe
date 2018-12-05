@@ -26,7 +26,7 @@
             <p class="price"> €<%= datas.daily_price %></p>
             <% if appointment.status == "finished" %>
               <%= button_to 'Add review', new_appointment_review_path(appointment), method: :post %>
-            <% end %>
+            <% en %>
           </div>
         </li>
         <% end %>
