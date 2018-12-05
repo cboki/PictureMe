@@ -1,26 +1,37 @@
 .banner {
   color: white;
   text-align: center;
-  height: 80vh;
+  height: 100vh;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 90px;
-  margin-bottom: 20px;
-}
-.banner h1 {
-  font-size: 50px;
-  font-weight: bold;
-  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
-  padding: 30px;
+  margin-top: 70px,
 }
 .banner p {
-  font-size: 25px;
+  font-size: 40px;
   font-weight: lighter;
   color: rgb(255, 255, 255);
-  opacity: 0.6;
   margin-bottom: 30px;
   padding-bottom: 30px;
 }
+ .logo {
+  padding: 50px;
+  height: 200px,
+}
+
+.btn-medium {
+  font-size: 24px;
+  color: white;
+  border: 1px solid #6DEEC0;
+  padding: 20px 50px;
+  border-radius: 50px;
+}
+.btn-medium:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: white;
+  background-color: #6DEEC0;
+}
+

@@ -1,25 +1,35 @@
 // Specific CSS for your home-page
 .fas {
   color: #6DEEC0;
-  padding: 20px;
-  i {
-    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  }
+  margin: 20px;
 }
-
 
 .lead {
   font-size: 20px;
-  padding: 20px;
+  padding-bottom: 50px;
 }
 
-.info-card {
-  height: 250px;
-  margin: 50px;
-  width: 350px;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
 }
 .white {
   background-color: white;
+}
+
+.container {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.card {
+  margin-top: 30px;
+  margin-bottom: 30px;
+box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+ h3 {
+  padding-top: 50px;
+  }
 }
 
 .btn-medium {
@@ -29,6 +39,7 @@
   padding: 20px 15px;
   border-radius: 50px;
 }
+
 .btn-medium:hover {
   opacity: 0.8;
   text-decoration: none;
