@@ -12,7 +12,7 @@
           <div class="message-name">
             <h3><% datas = @photographers.find(appointment.photographer_id) %>
               <%= datas.user.first_name %>
-             </h3>
+            </h3>
             <p><%= appointment.date %></p>
           </div>
           <div class="message-body">
@@ -25,8 +25,8 @@
             <p class="status pending"><%= appointment.status %></p>
             <p class="price"> €<%= datas.daily_price %></p>
             <% if appointment.status == "finished" %>
-              <%= button_to 'Add review', new_appointment_review_path(appointment), method: :post %>
-            <% en %>
+            <%= button_to 'Add review', new_appointment_review_path(appointment), method: :post %>
+            <% end %>
           </div>
         </li>
         <% end %>
