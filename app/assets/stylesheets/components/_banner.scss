@@ -3,34 +3,34 @@
   text-align: center;
   height: 100vh;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
-  background-size: cover !important;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 70px,
 }
 .banner p {
-  font-size: 40px;
-  font-weight: lighter;
+  font-size: 32px;
+  font-weight: 100;
   color: rgb(255, 255, 255);
   margin-bottom: 30px;
   padding-bottom: 30px;
 }
  .logo {
-  padding: 30px;
-  height: 200px,
+  padding: 20px;
+  height: 150px,
 }
 .btn-medium {
+  background-color: #900808;
   color: white;
   font-size: 24px;
-  border: 1px solid #6DEEC0;
-  padding: 20px 50px !important;
+  padding: 15px 50px;
   border-radius: 50px;
 }
-
 .btn-medium:hover {
-  opacity: 0.8;
   text-decoration: none;
   color: white;
-  background-color: #900808;
+  background-color: transparent;
+  border-style: solid;
+  border-color: #900808;
+  border-width: 2px;
 }
