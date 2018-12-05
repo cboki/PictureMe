@@ -1,37 +1,67 @@
 .photographer-card{
   padding: 10px;
-  width: 300px;
-  height: 400px;
-  background: transparent;
   border-radius: 2px;
   box-shadow:  0 1px 7px rgba(0,0,0,.05);
+  height: 300px;
+  width: 500px;
 }
 .photographer-photo {
-  height: 50%;
   position: relative;
+  height: 50%;
 }
-.photographer-name {
-  font-weight: bold;
-  font-size: 22px;
-}
-.photographer-details {
-  padding: 10px;
-  font-weight: lighter;
-}
-
 .cards {
-  display: flex;
+    display: flex;
   justify-content: space-around;
-  align-items: center;
+}
+.list-without-points {
+  list-style: none;
+  padding: 0px;
+}
 
+.photographer-name{
+  h3 {
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  color: white;
+  font-weight: semi-bold;
+  box-shadow:  0 1px 7px rgba(0,0,0,.05);
 
 }
-.photographer-name {
-  position: absolute;
-  left: 10px;
-  bottom: 10px;
-  h3 {
-  color: white;
-  }
+}
+.photographer-review {
+  p {
+    margin: 0px;
+
+}
+}
+.fa-star {
+  margin: 0px !important;
+  color: #f9a602 !important;
+}
+
+.fa-map-pin {
+  margin: 5px !important;
+  color: #900808 !important;
+}
+
+li {
+  padding: 0px;
+  font-weight: lighter;
+  font-size: 16px;
+}
+.location{
+  font-size: 20px;
+  font-style: normal;
+  text-decoration: none;
+  color: black;
+
+}
+
+.photographer-price {
+  font-size: 20px;
+  font-style: normal;
+  text-decoration: none;
+  color: black;
 
 }
