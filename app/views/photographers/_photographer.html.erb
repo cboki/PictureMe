@@ -21,10 +21,9 @@
         <li class="location"> <i class="fas fa-map-pin"></i> <%= photographer.location.capitalize %></li>
       </div>
       <div class="photographer-review">
-        <% if photographer.stars != nil %>
+        <p><% if photographer.stars != nil %>
 
-
-        <p><li class="stars"> <% photographer.stars.times do %>
+        <li class="stars"> <% photographer.stars.times do %>
           <i class="fas fa-star"></i>
           <% end %>
         </li>

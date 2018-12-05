@@ -37,12 +37,17 @@
           <div class="card-average">
             <p class="text text-center"><%= @photographer.user.first_name %> has <%= @photographer.reviews.count %> reviews</p>
             <p class="stars text-center">
+
+
+              <% if @photographer.stars != nil %>
               <% @photographer.stars.times do %>
                 <i class="fa fa-star" style="color: #ffb400"></i>
+
               <% end %>
               <% (5 - @photographer.stars).times do %>
               <!-- OMGGGGG -->
                 <i class="fa fa-star" style="color: lightgray"></i>
+              <% end %>
               <% end %>
             </p>
           </div>
