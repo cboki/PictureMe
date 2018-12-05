@@ -7,10 +7,12 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
-    @review.appointment = Appointment.find(params[:appointment_id])
-
+    @appointment = Appointment.find(params[:appointment_id])
+    @review.appointment = @appointment
+    @photographer = @appointment.photographer
+    # @photographer = Photographer.find(params([:]))
     if @review.save
-      redirect_to photographers_path
+      redirect_to photographer_path(@photographer)
     else
       render 'new'
     end
