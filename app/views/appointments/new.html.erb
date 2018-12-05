@@ -8,8 +8,9 @@
 
 
 <%= simple_form_for @appointment, :url => photographer_appointments_path, :method => :post do |f| %>
-  <%= f.input :date %>
+  <%= f.input :date, as: :string %>
   <br>
   <%= f.button :submit, class: "btn btn-danger" %>
 <% end %>
 </div>
+
