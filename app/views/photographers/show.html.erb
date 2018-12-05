@@ -1,0 +1,61 @@
+<div class="wrapper" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%), url('https://kitt.lewagon.com/placeholder/cities/london'); height: 50vh; background-position: center; background-size: cover;">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="header-photographer">
+            <div class="header-photographer-avatar text-center">
+              <img src="https://kitt.lewagon.com/placeholder/users/MaxxxxaM" class="img-circle" width="120" alt="" />
+            </div>
+            <div class="header-photographer-infos text-center">
+              <h3 class="full-name"><%= @photographer.user.full_name %></h3>
+              <p class="description">I have been photographer amateur for 15 years. Feel free to contact me to save your moments ...</p>
+              <ul class="list-inline">
+              <li class="location">📍 I live in <%= @photographer.location %></li>
+              <li class="language">💬 I can speak <%= @photographer.language %></li>
+              <li class="price">💰 My daily rate is <%= @photographer.daily_price %> €</li>
+              </ul>
+              <ul class="list-inline">
+                <% @photographer.categories.each do |category| %>
+                  <li><%= category.name %></li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="wrapper" id="wrapper-reviews">
+  <div class="container">
+    <div class="reviews">
+      <div class="row">
+        <div class="col-xs-12 col-lg-4">
+          <h4>They liked the experiences:</h4>
+          <div class="review-card">
+            <p class="stars">
+              <!-- TODO! Modify the 5 and put @photographer.stars when merged. -->
+              <% 5.times do %>
+                <i class="fa fa-star" style="color: #ffb400"></i>
+              <% end %>
+            </p>
+          </div>
+        </div>
+        <% @photographer.reviews.each do |review| %>
+        <div class="col-xs-12 col-lg-4">
+          <div class="review-card">
+            <div class="review-star">
+              <p>5 <i class="fa fa-star" style="color: #ffb400"></i></p>
+            </div>
+            <div class="review-content">
+              <p><%= review.content %></p>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="booking-form">
+
+    </div>
+  </div>
+</div>
