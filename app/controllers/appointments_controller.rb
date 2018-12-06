@@ -4,13 +4,12 @@ class AppointmentsController < ApplicationController
     @user = current_user
     @userAppointments = Appointment.where(user_id: @user.id)
     @photographers = Photographer.all
-
   end
 
-  def new
-    @appointment = Appointment.new
-    @photographer = Photographer.find(params[:photographer_id])
-  end
+  # def new
+  #   @appointment = Appointment.new
+  #   @photographer = Photographer.find(params[:photographer_id])
+  # end
 
   def create
     @photographer = Photographer.find(params[:photographer_id])

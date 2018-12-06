@@ -8,7 +8,7 @@ import { datePicker } from '../components/_datepicker';
 initTransparentNavbarOnScroll();
 
 
-const new_appointment = document.querySelector('.appointments.new')
+const new_appointment = document.querySelector('.photographers.show')
 if (new_appointment) {
   datePicker();
 }

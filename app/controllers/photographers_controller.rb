@@ -11,10 +11,8 @@ class PhotographersController < ApplicationController
       }
     end
 
-    def show
-      @photographer = Photographer.find(params[:id])
-      @review = Review.new
-      @photos = Photo.all
-    end
+  def show
+    @photographer = Photographer.find(params[:id])
+    @appointment = Appointment.new
   end
 end
