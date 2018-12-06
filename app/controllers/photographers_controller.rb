@@ -10,6 +10,7 @@ class PhotographersController < ApplicationController
         lat: photographer.latitude
       }
     end
+  end
 
   def show
     @photographer = Photographer.find(params[:id])
