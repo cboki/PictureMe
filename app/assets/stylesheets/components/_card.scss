@@ -12,7 +12,7 @@ a:hover {
 }
 .photographer-photo {
   position: relative;
-  height: 50%;
+  height: 64%;
 }
 .cards {
     display: flex;
@@ -26,8 +26,8 @@ a:hover {
 .photographer-name{
   h3 {
   position: absolute;
-  bottom: 5px;
-  left: 20px;
+  bottom: 4px;
+  left: 18px;
   color: white;
   font-weight: semi-bold;
   box-shadow:  0 1px 7px rgba(0,0,0,.05);
@@ -71,5 +71,9 @@ li {
   font-style: normal;
   text-decoration: none;
   color: black;
+}
 
+.photographer-action a {
+  font-size: 14px;
+  color: $red;
 }

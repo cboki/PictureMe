@@ -3,6 +3,9 @@
   h3 {
     margin: 10px 0px;
   }
+  .avatar {
+    width: 160px;
+  }
 }
 .header-photographer-infos {
 color: white;
@@ -74,7 +77,8 @@ padding: 20px 20px;
 }
 
 .review-content {
+  font-size: 14px;
   position: absolute;
-  left: 50px;
-  top: 20px;
+  left: 10px;
+  top: 28px;
 }
