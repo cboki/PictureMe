@@ -37,16 +37,15 @@ REVIEWS = [[ 5, 'This photographer is super mega cool !'], [ 5, 'Fantastic job !
 [ 5, 'I LOVE all the photos we took this day'], [ 4, 'Thank you for this day'], [ 3, 'Regular experience'], [ 2, 'The photographer was late !!!']]
 
 puts 'Creating new users...'
-20.times do
-  name_sample = GITHUB_NAMES.sample
+GITHUB_NAMES.each do |arr|
 
   user = User.new(
-    first_name: name_sample.first,
+    first_name: arr.first,
     last_name: Faker::Name.last_name,
     email: Faker::Internet.email,
     password: '123456',
     phone_number: Faker::PhoneNumber.phone_number,
-    avatar: "https://kitt.lewagon.com/placeholder/users/#{name_sample.last}"
+    avatar: "https://kitt.lewagon.com/placeholder/users/#{arr.last}"
     )
   user.save
 end
