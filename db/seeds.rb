@@ -30,6 +30,8 @@ PHOTOS_URLS = [ 'https://cdn.shopify.com/s/files/1/0684/3259/files/5.jpg',
                'https://cdn.shopify.com/s/files/1/0684/3259/files/2_8c8fa4cc-8140-4558-a2aa-c1b7d9276959.jpg',
                'https://cdn.shopify.com/s/files/1/0684/3259/files/5N1A9329.jpg']
 
+REVIEW_CONTENTS = [ 'This photographer is super mega cool !', 'Fantastic job ! I highly recommend', 'Awsome job !', ' great experience, I love my new photos', 'Perfect for my personal book']
+
 puts 'Creating new users...'
 30.times do
   first_name, last_name = Faker::FunnyName.two_word_name.split
@@ -55,7 +57,7 @@ User.first(10).each do |user|
 end
 
 puts 'Creating new appointments and reviews...'
-10.times do
+30.times do
   user = User.find(User.pluck(:id).sample)
   photographer = Photographer.find(Photographer.pluck(:id).sample)
 
@@ -70,8 +72,9 @@ puts 'Creating new appointments and reviews...'
 
 
   review = Review.new(
-    stars: rand(1..5),
-    appointment: appointment)
+    stars: rand(3..5),
+    appointment: appointment,
+    content: REVIEW_CONTENTS.sample)
   review.save
 end
 
