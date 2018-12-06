@@ -4,9 +4,32 @@
     margin: 10px 0px;
   }
 }
-
 .header-photographer-infos {
 color: white;
+}
+
+.first-row {
+  padding: 36px 0 32px 0;
+  h4 {
+    margin: 0 0 16px 0;
+  }
+}
+
+.description {
+position: relative;
+padding: 20px 20px;
+}
+
+#quote-left {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+#quote-right {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
 }
 
 .card-average {
