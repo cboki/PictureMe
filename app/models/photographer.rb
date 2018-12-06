@@ -10,6 +10,8 @@ class Photographer < ApplicationRecord
   validates :language, presence: true
   validates :daily_price, presence: true, numericality: true
   validates :user, presence: true, uniqueness: true
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
 
   def stars
     # Calcul the number of stars with all the reviews
