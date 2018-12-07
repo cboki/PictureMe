@@ -9,6 +9,7 @@ const carousel = () => {
     nav: false,
     controls:false,
     autoplayButtonOutput: false,
+    mouseDrag:true,
 
   });
 }
@@ -25,6 +26,7 @@ const carousel2 = () => {
     nav: false,
     controls:false,
     autoplayButtonOutput: false,
+    mouseDrag:true,
 
   });
 }
