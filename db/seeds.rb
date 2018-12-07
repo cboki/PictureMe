@@ -29,7 +29,6 @@ PHOTOS_URLS = [ 'https://cdn.shopify.com/s/files/1/0684/3259/files/5.jpg',
                'https://cdn.shopify.com/s/files/1/0684/3259/files/4_9465cdb2-b026-4cec-bc32-7fcdf4e90604.jpg',
                'https://cdn.shopify.com/s/files/1/0684/3259/files/2_8c8fa4cc-8140-4558-a2aa-c1b7d9276959.jpg',
                'https://cdn.shopify.com/s/files/1/0684/3259/files/5N1A9329.jpg',
-               'https://static1.squarespace.com/static/52094b1be4b0f6f84d966b0f/5a0a242f9140b7f3b7e63ced/5aea57f370a6ad7a605eb6d1/1531054157764/paris-photographers-2.jpg?format=750',
                'https://static1.squarespace.com/static/52094b1be4b0f6f84d966b0f/5a0a242f9140b7f3b7e63ced/5aea57f103ce646e4cecd944/1531054157761/paris-photographers-1.jpg',
                'https://static1.squarespace.com/static/52094b1be4b0f6f84d966b0f/5a0a242f9140b7f3b7e63ced/5aea57f8562fa782f1b06cbc/1531054157766/paris-photographers-3.jpg?format=500w',
                'https://static1.squarespace.com/static/52094b1be4b0f6f84d966b0f/5a0a242f9140b7f3b7e63ced/5aea58290e2e725df95aba58/1531054157768/paris-photographers-4.jpg?format=750w',
@@ -44,7 +43,7 @@ PHOTOS_URLS = [ 'https://cdn.shopify.com/s/files/1/0684/3259/files/5.jpg',
                'https://static1.squarespace.com/static/52094b1be4b0f6f84d966b0f/5ab593bc03ce64865010c7b3/5ab593ed562fa77d176c92da/1521849365435/berlin-photographer-3.jpg?format=750w',
                'https://static1.squarespace.com/static/52094b1be4b0f6f84d966b0f/5ab593bc03ce64865010c7b3/5ab593c48a922d7af06ede18/1521849336701/berlin-photographer-1.jpg?format=750w']
 GITHUB_NAMES = [['Antoine', 'welan125'], ['Ben', 'BenDu89'], ['Carolina', 'carolinalemos'], ['Chris', 'sisserian'], ['Vasco', 'kauredo'], ['Clélia', 'UpClelia'], ['Clément', 'cboki'], ['Daniel', 'dfmore'], ['Jonny', 'jonnymarshall'], ['Manuel', 'mlrcbsousa'], ['Mathilde','matbrg'], ['Paul', 'pbusby'], ['Thibaut', 'Bitais']]
-CITIES = %w[Paris London Amsterdam Lisbon Berlin Rio Bali Lyon Lille Mexico Tokyo Milan Brussels Barcelona]
+CITIES = %w[paris london amsterdam lisbon berlin rio bali lyon lille mexico tokyo milan brussels barcelona]
 STATUS = %w[pending accepted rejected finished]
 REVIEWS = [[ 5, 'This photographer is super mega cool !'], [ 5, 'Fantastic job ! I highly recommend'],
 [ 5, 'Awesome job !'],[ 4,' great experience, I love my new photos'], [ 3, 'Nice pictures for my personal book' ],
