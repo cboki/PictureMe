@@ -50,6 +50,8 @@ REVIEWS = [[ 5, 'This photographer is super mega cool !'], [ 5, 'Fantastic job !
 [ 5, 'Awesome job !'],[ 4,' great experience, I love my new photos'], [ 3, 'Nice pictures for my personal book' ],
 [ 5, 'I LOVE all the photos we took this day'], [ 4, 'Thank you for this day'], [ 3, 'Regular experience'], [ 2, 'The photographer was late !!!']]
 
+REVIEW_CONTENTS = [ 'This photographer is super mega cool !', 'Fantastic job ! I highly recommend', 'Awsome job !', ' great experience, I love my new photos', 'Perfect for my personal book']
+
 puts 'Creating new users...'
 GITHUB_NAMES.each do |arr|
 
@@ -76,6 +78,7 @@ User.all.each do |user|
 end
 
 puts 'Creating new appointments and reviews...'
+
 User.all.each do |user|
   5.times do
     photographer = Photographer.find(Photographer.pluck(:id).sample)
