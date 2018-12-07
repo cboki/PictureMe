@@ -7,6 +7,7 @@ class PhotographersController < ApplicationController
       @photographers = PgSearch.multisearch(params[:query])
       @photographers_with_location = Photographer.where.not(latitude: nil, longitude: nil)
       @photographers_with_location = @photographers_with_location.where(location: params[:query])
+      raise
       @markers = @photographers_with_location.map do |photographer|
         {
           lng: photographer.longitude,
