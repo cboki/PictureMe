@@ -1,0 +1,5 @@
+<h4>Book with <%= photographer.user.first_name %></h4>
+<%= simple_form_for [photographer, appointment] do |f| %>
+  <%= f.input :date, as: :string %>
+  <%= f.button :submit, class: "btn btn-danger" %>
+<% end %>

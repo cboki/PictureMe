@@ -1,0 +1,75 @@
+a:hover {
+  text-decoration: none;
+}
+.photographer-card{
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  box-shadow:  0 1px 7px rgba(0,0,0,.05);
+  height: 300px;
+  width: 500px;
+}
+.photographer-photo {
+  position: relative;
+  height: 50%;
+}
+.cards {
+    display: flex;
+  justify-content: space-around;
+}
+.list-without-points {
+  list-style: none;
+  padding: 0px;
+}
+
+.photographer-name{
+  h3 {
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  color: white;
+  font-weight: semi-bold;
+  box-shadow:  0 1px 7px rgba(0,0,0,.05);
+
+}
+}
+.photographer-review {
+  p {
+    margin: 0px;
+
+}
+}
+.fa-yellow {
+  color: #ffb400;
+}
+
+.fa-grey {
+  color: lightgray;
+}
+
+.fa-map-pin {
+  margin: 5px !important;
+  color: #900808 !important;
+}
+
+li {
+  padding: 0px;
+  font-weight: lighter;
+  font-size: 16px;
+}
+.location{
+  font-size: 20px;
+  font-style: normal;
+  text-decoration: none;
+  color: black;
+
+}
+
+.photographer-price {
+  font-size: 20px;
+  font-style: normal;
+  text-decoration: none;
+  color: black;
+
+}

@@ -2,28 +2,61 @@
 
 <div class="white">
   <div class="container">
-    <div class="grid">
-      <div class="card">
-        <div>
+    <div class="row">
+      <div class="col-xs-4">
+        <div class="text-center">
           <h3>Anywhere</h3>
           <i class="fas fa-globe fa-3x"></i>
-          <p class="lead mb-0">Find a photograph everywhere</p></div>
+          <p class="lead mb-0">Find a photograph everywhere</p>
         </div>
-        <div class="card">
-          <div>
-            <h3>Affordable</h3>
-            <i class="fas fa-hand-holding-usd fa-3x"></i>
-            <p class="lead mb-0">Professional photography is expensive? Pictureme isn't.</p>
+      </div>
+      <div class="col-xs-4">
+        <div class="text-center">
+          <h3>Affordable</h3>
+          <i class="fas fa-hand-holding-usd fa-3x"></i>
+          <p class="lead mb-0">Professional photography is expensive? Pictureme isn't.</p>
+        </div>
+      </div>
+      <div class="col-xs-4">
+        <div class="text-center">
+          <h3>Variety</h3>
+          <i class="fas fa-camera fa-3x"></i>
+          <p class="lead mb-0">Sports, portrait or something special?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="wrapper">
+  <div class="container">
+  <div class="text-center">
+    <h3>Have a look at our photographers great work !</h3>
+    <div>
+      <div class="text-left">
+        <h4>Get your event shoot</h4>
+        <div class="row">
+          <div class="col-xs-12 slider-container">
+            <div id="carousel1" >
+              <%= image_tag'event1.jpg', class: "image" %>
+              <%= image_tag'event2.jpg', class: "image" %>
+              <%= image_tag'event3.jpg', class: "image" %>
+            </div>
           </div>
-        </div>
-        <div class="card">
-          <div>
-            <h3>Variety</h3>
-            <i class="fas fa-camera fa-3x"></i>
-            <p class="lead mb-0">Sports, portrait or something special?</p>
+
+          <div class="col-xs-12 slider-container">
+            <h4>Get your portrait shoot</h4>
+            <div id="carousel2" >
+              <%= image_tag'portrait1.jpg', class: "image" %>
+              <%= image_tag'portrait2.jpg', class: "image" %>
+              <%= image_tag'portrait3.jpg', class: "image" %>
+              <%= image_tag'portrait4.jpg', class: "image" %>
+              <%= image_tag'portrait4.jpg', class: "image" %>
+
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  </div>
   </div>
 </div>
