@@ -1,6 +1,23 @@
 
-  <h1> Find a perfect match</h1>
+<div>
+  <div>
+    <% if params[:query].present? %>
+    <h1> This is who we found for you: "<%= params[:query] %>"</h1>
 
-<div class="row">
-  <%= render @photographers %>
+    <div class="row">
+      <% @photographers.each do|photographer| %>
+      <%= render @photographers.searchable %>
+      <% end %>
+    </div>
+  </div>
+
+  <% else %>
+
+  <div>
+    <h1> Find a perfect match</h1>
+    <div>
+      <%= render @photographers %>
+      <% end %>
+    </div>
+  </div>
 </div>

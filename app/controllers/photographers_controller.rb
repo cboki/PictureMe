@@ -1,10 +1,16 @@
 class PhotographersController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
-    @photographers = Photographer.all
+    if params[:query].present?
+      @photographers = PgSearch.multisearch(params[:query])
+
+    else
+      @photographers = Photographer.all
+    end
   end
 
- def show
+  def show
     @photographer = Photographer.find(params[:id])
     @review = Review.new
     @photos = Photo.all
