@@ -9,15 +9,15 @@ class PhotographersController < ApplicationController
     else
     @photographers = Photographer.all
     @photographers_with_location = Photographer.where.not(latitude: nil, longitude: nil)
-
     @markers = @photographers_with_location.map do |photographer|
       {
         lng: photographer.longitude,
         lat: photographer.latitude
       }
-
+  end
     end
   end
+
 
   def show
     @photographer = Photographer.find(params[:id])
