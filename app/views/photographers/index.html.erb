@@ -6,7 +6,7 @@
 
     <div class="row">
       <% @photographers.each do|photographer| %>
-      <%= render @photographers.searchable %>
+      <%= render photographer.searchable %>
       <% end %>
     </div>
   </div>
