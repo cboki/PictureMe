@@ -1,6 +1,12 @@
 class PhotographersController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
+
+    if params[:query].present?
+      @photographers = PgSearch.multisearch(params[:query])
+
+    else
     @photographers = Photographer.all
     @photographers_with_location = Photographer.where.not(latitude: nil, longitude: nil)
 
@@ -9,6 +15,7 @@ class PhotographersController < ApplicationController
         lng: photographer.longitude,
         lat: photographer.latitude
       }
+
     end
   end
 

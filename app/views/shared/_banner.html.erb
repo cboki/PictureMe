@@ -3,6 +3,11 @@
       <%= image_tag "logo.png", height: 50, class: "logo" %>
       <p><span id="banner-typed-text">Text</span></p>
 
-      <%= link_to "Find a photographer", photographers_path, class: "btn-medium"  %>
+      <%= form_tag photographers_path, method: :get do %>
+        <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a photographer"%>
+      <% end %>
     </div>
   </div>

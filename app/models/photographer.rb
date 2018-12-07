@@ -1,4 +1,6 @@
 class Photographer < ApplicationRecord
+  include PgSearch
+
   belongs_to :user
   has_many :appointments, dependent: :destroy
   has_many :reviews, through: :appointments
@@ -13,6 +15,8 @@ class Photographer < ApplicationRecord
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
 
+  multisearchable against: :location
+
   def stars
     # Calcul the number of stars with all the reviews
     # Return nil if no review, or return the average as an integer
@@ -22,6 +26,7 @@ class Photographer < ApplicationRecord
     reviews.each do |review|
       sum += review.stars
     end
+
     average = sum / reviews.count
     average.floor
   end
