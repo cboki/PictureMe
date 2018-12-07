@@ -82,3 +82,13 @@ padding: 20px 20px;
   left: 10px;
   top: 28px;
 }
+
+
+.gallery {
+  margin: auto;
+  display: block;
+  width: 250px;
+  height: 250px;
+  padding: 10px;
+  object-fit: cover;
+}
