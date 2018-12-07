@@ -7,7 +7,9 @@
         <%= text_field_tag :query,
         params[:query],
         class: "form-control",
-        placeholder: "Find a photographer"%>
+        placeholder: "Where do you want to do your shooting ?"%>
       <% end %>
+        <%= link_to 'See all the photographers', photographers_path, class: 'btn btn-danger booking'   %>
+      </div>
     </div>
   </div>
